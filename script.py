@@ -49,7 +49,6 @@ with open(output_csv,mode='w', newline='', encoding='utf-8') as f:
     writer = csv.DictWriter(f, fieldnames=field_names)
     writer.writeheader()
     for t in tickers:
-        print(len(tickers))
         row = {key: t.get(key, '') for key in field_names}
         writer.writerow(row)
 
